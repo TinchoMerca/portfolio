@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollador Web | Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.jpeg" type="image/png">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Tu Nombre | Desarrollador Web">
+    <meta property="og:description" content="Diseño y desarrollo de sitios web modernos. ¡Mirá mi portfolio!">
+    <meta property="og:image" content="https://martin-mercado-dev.netlify.app/img/cp.png">
+    <meta property="og:url" content="https://martin-mercado-dev.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Dev<span class="highlight">Port</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#portfolio">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content hidden">
+            <h1>Hola, soy <span class="highlight">Martin Mercado</span></h1>
+            <p>Desarrollador Web Frontend. Transformo ideas en experiencias digitales modernas.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn btn-primary">Ver Mis Trabajos</a>
+                <a href="#contacto" class="btn btn-outline">Contactar</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Más que escribir código, brindo soluciones. Comencé mi camino como desarrollador
+                        <strong>digitalizando el negocio familiar</strong> de turismo en Mendoza, creando
+                        su presencia web y herramientas de gestión interna.
+                        <br><br>
+                        Hoy me especializo en crear sitios web que ayuden a otros emprendedores y
+                        profesionales a mostrar sus servicios de forma moderna y eficiente.
+                        Actualmente profundizando en JavaScript y Backend para crear aplicaciones web completas.
+                    </p>
+                </div>
+                <div class="skills-box">
+                    <h3>Mis Habilidades</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">Mis Servicios</h2>
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <i class="fas fa-code service-icon"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios web modernos y rápidos construidos desde cero con HTML, CSS y JavaScript o adaptados a tus
+                        necesidades.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt service-icon"></i>
+                    <h3>Diseño Responsive</h3>
+                    <p>Tu sitio se verá perfecto en cualquier dispositivo: celulares, tablets y computadoras de
+                        escritorio.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-rocket service-icon"></i>
+                    <h3>Optimización & SEO</h3>
+                    <p>Mejoro la velocidad de tu web y la estructura para que Google la encuentre más fácilmente.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>Cabañas Rincón de Lourdes</h3>
+                        <p>Sitio web comercial para complejo turístico en Villa 25 de Mayo. Diseño responsive enfocado
+                            en la conversión de reservas, galería de imágenes optimizada e integración con mapas.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>CSS3</span><span>Responsive</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="https://unrincondelourdes.vercel.app" target="_blank">Ver Sitio</a>
+                            <a href="#" class="disabled">Código Privado</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>Sistema de Gestión de Reservas</h3>
+                        <p>Aplicación web interna para administración hotelera. Incluye calendario interactivo de
+                            disponibilidad, cálculo automático de tarifas, gestión de huéspedes y sistema de
+                            notificaciones en tiempo real.</p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span><span>Lógica de Negocio</span><span>DOM</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Ver Video Demo</a>
+                            <a href="#">Ver Código (Snippet)</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-content">
+                        <h3>App de Tareas (ToDo)</h3>
+                        <p>Aplicación interactiva para gestionar tareas diarias usando almacenamiento local
+                            (LocalStorage).</p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span><span>DOM</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Demo</a>
+                            <a href="#">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">Trabajemos Juntos</h2>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>¿Tenés un proyecto en mente?</h3>
+                    <p>Estoy disponible para trabajos freelance. ¡Hablemos de tu idea!</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:tuemail@ejemplo.com" class="contact-item">
+                            <i class="fas fa-envelope"></i> tuemail@ejemplo.com
+                        </a>
+                        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-item">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/tuusuario" target="_blank" class="contact-item">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formspree.io/f/mzdbjoqw" method="POST">
+
+                    <div class="input-group">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Tu Email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Martin Mercado. Hecho con código puro.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
