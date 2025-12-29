@@ -5,219 +5,242 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Martín Mercado | Desarrollador Web en San Rafael & Mendoza</title>
+    <title>Martín | Full Stack Developer & Ing. en Sistemas</title>
 
     <meta name="description"
-        content="Diseño y desarrollo de páginas web a medida en San Rafael, Mendoza. Especialista en sitios para turismo, cabañas y pymes. ¡Consultá por tu proyecto!">
+        content="Portfolio de Martín, estudiante avanzado de Ingeniería en Sistemas y Desarrollador Full Stack. Especialista en crear soluciones web escalables y código limpio.">
     <meta name="keywords"
-        content="Desarrollador Web, San Rafael, Mendoza, Diseño Web, Freelancer, Cabañas, HTML, CSS, Javascript">
-    <meta name="author" content="Martín Mercado">
+        content="Desarrollo Web, Ingeniería en Sistemas, Full Stack, React, Node.js, Portfolio, Programador Argentina">
+    <meta name="author" content="Martín">
+
+    <meta property="og:title" content="Martín - Full Stack Developer">
+    <meta property="og:description" content="Ingeniería de software y diseño moderno. Mira mis proyectos recientes.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/0f172a/38bdf8?text=Martin+Dev+Portfolio">
+    <meta property="og:url" content="https://tu-dominio.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="./styles/styles.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="./img/favicon.jpeg" type="image/png">
-
-    <meta property="og:title" content="Martín Mercado | Desarrollador Web">
-    <meta property="og:description" content="Diseño sitios web modernos para negocios en Mendoza. ¡Mirá mi portfolio!">
-    <meta property="og:image" content="https://dev-martinmercado.netlify.app/img/cp.png">
-    <meta property="og:url" content="https://dev-martinmercado.netlify.app/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar">
-            <div class="logo">Dev<span class="highlight">Port</span></div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#portfolio">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">&lt;Martín<span class="dot">.Dev</span>/&gt;</div>
+
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content hidden">
-            <h1>Hola, soy Martin Mercado <br> <span class="highlight">Desarrollador Web Freelance</span></h1>
-            <p>Desarrollador Web Frontend. Transformo ideas en experiencias digitales modernas.</p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="btn btn-primary">Ver Mis Trabajos</a>
-                <a href="#contacto" class="btn btn-outline">Contactar</a>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <section id="sobre-mi" class="section hidden">
-        <div class="container">
-            <h2 class="section-title">Sobre Mí</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Más que escribir código, brindo soluciones. Comencé mi camino como desarrollador
-                        <strong>digitalizando el negocio familiar</strong> de turismo en Mendoza, creando
-                        su presencia web y herramientas de gestión interna.
-                        <br><br>
-                        Hoy me especializo en crear sitios web que ayuden a otros emprendedores y
-                        profesionales a mostrar sus servicios de forma moderna y eficiente.
-                        Actualmente profundizando en JavaScript y Backend para crear aplicaciones web completas.
-                    </p>
-                </div>
-                <div class="skills-box">
-                    <h3>Mis Habilidades</h3>
-                    <div class="skills-list">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Responsive Design</span>
-                    </div>
+        <section id="inicio">
+            <div class="container hero-content">
+                <h2>Hola, soy Martín</h2>
+                <h1>Ingeniería en Sistemas <br> <span style="color: var(--primary)">Full Stack Developer</span></h1>
+                <p>Estudiante avanzado transformando conceptos complejos en aplicaciones web modernas, limpias y
+                    escalables.</p>
+
+                <div class="cta-buttons">
+                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-outline">Hablemos</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="servicios" class="section hidden">
-        <div class="container">
-            <h2 class="section-title">Mis Servicios</h2>
-            <div class="services-grid">
+        <section id="sobre-mi">
+            <div class="container">
+                <h2 class="section-title">Sobre Mí & Stack</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Actualmente cursando el <strong>4to año de Ingeniería en Sistemas</strong>. Mi base
+                            académica me permite entender la arquitectura de software y la lógica compleja, mientras que
+                            mi curiosidad me lleva a aprender las últimas tecnologías web de forma autodidacta.
+                        </p>
+                        <p>
+                            Me apasiona aplicar la tecnología para resolver problemas reales. He desarrollado soluciones
+                            digitales para negocios familiares, optimizando procesos de gestión y mejorando su presencia
+                            digital. Mi objetivo es crear software que sea tan eficiente por dentro como atractivo por
+                            fuera.
+                        </p>
+                    </div>
 
-                <div class="service-card">
-                    <i class="fas fa-code service-icon"></i>
-                    <h3>Desarrollo Web</h3>
-                    <p>Sitios web modernos y rápidos construidos desde cero con HTML, CSS y JavaScript o adaptados a tus
-                        necesidades.</p>
+                    <div class="stack-wrapper">
+                        <div class="stack-grid">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item"><i class="fas fa-database"></i><span>SQL</span></div>
+                            <div class="tech-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="service-card">
-                    <i class="fas fa-mobile-alt service-icon"></i>
-                    <h3>Diseño Responsive</h3>
-                    <p>Tu sitio se verá perfecto en cualquier dispositivo: celulares, tablets y computadoras de
-                        escritorio.</p>
-                </div>
-
-                <div class="service-card">
-                    <i class="fas fa-rocket service-icon"></i>
-                    <h3>Optimización & SEO</h3>
-                    <p>Mejoro la velocidad de tu web y la estructura para que Google la encuentre más fácilmente.</p>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="portfolio" class="section hidden">
-        <div class="container">
-            <h2 class="section-title">Mis Proyectos</h2>
-            <div class="projects-grid">
+        <section id="proyectos">
+            <div class="container">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <div class="projects-grid">
 
-                <article class="project-card">
-                    <div class="card-content">
-                        <h3>Cabañas Rincón de Lourdes</h3>
-                        <p>Sitio web comercial para complejo turístico en Villa 25 de Mayo. Diseño responsive enfocado
-                            en la conversión de reservas, galería de imágenes optimizada e integración con mapas.</p>
-                        <div class="tech-stack">
-                            <span>HTML5</span><span>CSS3</span><span>Responsive</span>
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3 class="project-title">Un Rincón de Lourdes</h3>
+                            <p class="project-desc">
+                                Landing page moderna para un complejo de cabañas. Diseñada para maximizar la conversión de visitantes a huéspedes, con galería de imágenes y contacto directo.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="#" title="Ver Código"><i class="fab fa-github link-icon"></i></a>
+                                <a href="#" title="Visitar Sitio"><i class="fas fa-external-link-alt link-icon"></i></a>
+                            </div>
                         </div>
-                        <div class="card-links">
-                            <a href="https://unrincondelourdes.vercel.app" target="_blank">Ver Sitio</a>
-                            <a href="#" class="disabled">Código Privado</a>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3 class="project-title">Sistema de Gestión de Reservas</h3>
+                            <p class="project-desc">
+                                Aplicación web interna para administración hotelera. Incluye calendario interactivo, sistema de notas, gestión de clientes y notificaciones automáticas.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">JavaScript Avanzado</span>
+                                <span class="tag">Lógica de Negocio</span>
+                                <span class="tag">DOM Manipulation</span>
+                            </div>
+                            <div class="card-links">
+                                <a href="#" title="Ver Código"><i class="fab fa-github link-icon"></i></a>
+                                <a href="#" title="Ver Demo"><i class="fas fa-desktop link-icon"></i></a>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="card-content">
-                        <h3>Sistema de Gestión de Reservas</h3>
-                        <p>Aplicación web interna para administración hotelera. Incluye calendario interactivo de
-                            disponibilidad, cálculo automático de tarifas, gestión de huéspedes y sistema de
-                            notificaciones en tiempo real.</p>
-                        <div class="tech-stack">
-                            <span>JavaScript</span><span>Lógica de Negocio</span><span>DOM</span>
+                    <article class="project-card">
+                        <div class="card-content">
+                            <h3 class="project-title">Servicios Digitales & Seguridad</h3>
+                            <p class="project-desc">
+                                <em>(En Desarrollo)</em> Plataforma para servicios de instalación técnica: Aires acondicionados, electricidad y sistemas de seguridad/alarmas.
+                            </p>
+                            <div class="tags">
+                                <span class="tag">Próximamente</span>
+                                <span class="tag">UI/UX Design</span>
+                            </div>
+                            <div class="card-links">
+                                <span title="En construcción" style="cursor: help; opacity: 0.5;"><i class="fas fa-tools link-icon"></i></span>
+                            </div>
                         </div>
-                        <div class="card-links">
-                            <a href="#">Ver Video Demo</a>
-                            <a href="#">Ver Código (Snippet)</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="card-content">
-                        <h3>App de Tareas (ToDo)</h3>
-                        <p>Aplicación interactiva para gestionar tareas diarias usando almacenamiento local
-                            (LocalStorage).</p>
-                        <div class="tech-stack">
-                            <span>JavaScript</span><span>DOM</span>
-                        </div>
-                        <div class="card-links">
-                            <a href="#">Demo</a>
-                            <a href="#">Código</a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="section hidden">
-        <div class="container">
-            <h2 class="section-title">Trabajemos Juntos</h2>
-
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>¿Tenés un proyecto en mente?</h3>
-                    <p>Estoy disponible para trabajos freelance. ¡Hablemos de tu idea!</p>
-
-                    <div class="contact-links">
-                        <a href="mailto:tuemail@ejemplo.com" class="contact-item">
-                            <i class="fas fa-envelope"></i> tuemail@ejemplo.com
-                        </a>
-                        <a href="https://linkedin.com/in/tuusuario" target="_blank" class="contact-item">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/tuusuario" target="_blank" class="contact-item">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
                 </div>
-
-                <form class="contact-form" action="https://formspree.io/f/mzdbjoqw" method="POST">
-
-                    <div class="input-group">
-                        <input type="text" name="nombre" placeholder="Tu nombre" required>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="Tu Email" required>
-                    </div>
-
-                    <div class="input-group">
-                        <textarea name="mensaje" placeholder="Cuéntame sobre tu proyecto" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contacto">
+            <div class="container">
+                <h2 class="section-title">¿Trabajamos juntos?</h2>
+
+                <div class="contact-wrapper">
+
+                    <div class="contact-info">
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Estoy buscando oportunidades para aplicar mis conocimientos de ingeniería en proyectos
+                            desafiantes. Si tienes una pregunta o simplemente quieres saludar, mi bandeja de entrada
+                            siempre está abierta.
+                        </p>
+
+                        <div style="margin-bottom: 2rem;">
+                            <h4 style="color: var(--text-main); margin-bottom: 0.5rem;">Ubicación</h4>
+                            <p style="color: var(--text-muted);">Argentina (Remoto)</p>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="social-btn" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:martin@email.com" class="social-btn" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form action="https://formspree.io/f/mzdbjoqw" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" class="form-control" required
+                                placeholder="Tu nombre">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                placeholder="tu@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" required
+                                placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Enviar Mensaje <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; 2025 Martin Mercado. Hecho con código puro.</p>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Martín. Codeado con <i class="fas fa-heart"
+                    style="color: var(--primary)"></i> y buenas prácticas.</p>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
 </body>
 
 </html>

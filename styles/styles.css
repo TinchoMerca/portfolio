@@ -1,20 +1,31 @@
-/* --- VARIABLES GLOBALES --- */
+/* =========================================
+   CSS3 (DISEÑO & EXPERIENCIA)
+   ========================================= */
+
+/* Variables CSS (:root) para consistencia y fácil mantenimiento del tema */
 :root {
-    --bg-dark: #0f172a;
-    /* Fondo principal */
+    /* Paleta Dark Mode Premium */
+    --bg-body: #0f172a;
+    /* Slate 900: Oscuro profundo, mejor que negro puro */
     --bg-card: #1e293b;
-    /* Fondo de tarjetas */
-    --text-main: #f8fafc;
-    /* Texto blanco */
+    /* Slate 800: Para contraste de tarjetas */
+    --primary: #38bdf8;
+    /* Sky 400: Acento vibrante y tecnológico */
+    --secondary: #818cf8;
+    /* Indigo 400: Gradientes secundarios */
+    --text-main: #f1f5f9;
+    /* Slate 100: Blanco hueso para evitar fatiga visual */
     --text-muted: #94a3b8;
-    /* Texto grisáceo */
-    --accent: #38bdf8;
-    /* Cian Neón */
-    --accent-glow: rgba(56, 189, 248, 0.4);
-    --font-main: 'Poppins', sans-serif;
+    /* Slate 400: Texto secundario */
+    --nav-bg: rgba(15, 23, 42, 0.85);
+    /* Efecto vidrio */
+
+    /* Espaciado y Transiciones */
+    --transition: all 0.3s ease;
+    --container-width: 1100px;
 }
 
-/* --- RESET BÁSICO --- */
+/* Reset básico y scroll suave nativo */
 * {
     margin: 0;
     padding: 0;
@@ -23,12 +34,13 @@
 
 html {
     scroll-behavior: smooth;
+    /* Smooth Scroll nativo */
 }
 
 body {
-    background-color: var(--bg-dark);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
     color: var(--text-main);
-    font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -36,40 +48,91 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    transition: var(--transition);
 }
 
 ul {
     list-style: none;
 }
 
-/* --- HEADER & NAV --- */
+/* Utilidades */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    margin-left: 10px;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: rgba(56, 189, 248, 0.1);
+}
+
+/* ================= HEADER & NAV ================= */
+/* Uso de semantic <header> y <nav> */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15, 23, 42, 0.95);
+    background: var(--nav-bg);
     backdrop-filter: blur(10px);
+    /* Efecto Glassmorphism moderno */
     z-index: 1000;
+    padding: 1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.navbar {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    color: var(--text-main);
 }
 
-.highlight {
-    color: var(--accent);
+.logo span {
+    color: var(--primary);
 }
 
 .nav-links {
@@ -78,129 +141,134 @@ header {
 }
 
 .nav-links a {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
     color: var(--text-muted);
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-/* --- HERO SECTION --- */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- BOTONES --- */
-.btn {
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.btn-primary {
-    background-color: var(--accent);
-    color: var(--bg-dark);
-    border: 2px solid var(--accent);
-}
-
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--accent);
-    box-shadow: 0 0 15px var(--accent-glow);
-}
-
-.btn-outline {
-    border: 2px solid var(--text-muted);
-    color: var(--text-muted);
-}
-
-.btn-outline:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-/* --- SECCIONES GENERALES --- */
-.section {
-    padding: 5rem 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
     position: relative;
 }
 
-/* Línea decorativa debajo del título */
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--accent);
-    margin: 10px auto 0;
-    border-radius: 2px;
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
 }
 
-/* --- ABOUT & SKILLS --- */
-.about-content {
+/* Indicador visual activo (Scroll Spy) */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+/* ================= HERO SECTION ================= */
+#inicio {
+    height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    /* Offset del header */
+}
+
+.hero-content h2 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+/* ================= SOBRE MÍ & STACK ================= */
+section {
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
 }
 
-.about-text,
-.skills-box {
-    flex: 1 1 300px;
+.about-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
 }
 
-.skills-list {
+.stack-grid {
+    display: grid;
+    /* Aumentado minmax a 110px para evitar que se aprieten 3 columnas en ~400px */
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tech-item {
+    background: var(--bg-card);
+    padding: 0.75rem;
+    /* Reducido ligeramente para dar más espacio interno al texto */
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Flex para asegurar centrado vertical y horizontal */
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.skill-tag {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 8px 15px;
-    border-radius: 20px;
+.tech-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.tech-item i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.tech-item span {
+    display: block;
     font-size: 0.9rem;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    color: var(--accent);
+    font-weight: 600;
+    word-break: break-word;
+    /* Evita que palabras largas rompan el diseño */
 }
 
-/* --- PROJECT CARDS --- */
+/* ================= PROYECTOS ================= */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -209,273 +277,234 @@ header {
 
 .project-card {
     background: var(--bg-card);
-    border-radius: 10px;
+    border-radius: 16px;
     overflow: hidden;
+    transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: 0.3s;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Efecto Hover Elevation para UX */
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: var(--accent);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary);
 }
 
-.project-card h3 {
+.card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: var(--text-main);
 }
 
-.project-card p {
+.project-desc {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-.tech-stack {
-    margin-bottom: 1.5rem;
-}
-
-.tech-stack span {
-    font-size: 0.8rem;
-    color: var(--accent);
-    margin-right: 10px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.card-links a {
-    margin-right: 15px;
-    font-size: 0.9rem;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 2px;
-}
-
-.card-links a:hover {
-    color: var(--accent);
-}
-
-/* --- CONTACT FORM --- */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: 10px;
-}
-
-.input-group {
-    margin-bottom: 1.5rem;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    background: rgba(15, 23, 42, 0.5);
-    /* Fondo oscuro input */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    color: var(--text-main);
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--accent);
-}
-
-/* --- CONTACTO EXTRA --- */
-.contact-wrapper {
+.tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.contact-info {
-    flex: 1 1 300px;
+.tag {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.card-links {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.contact-links {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
     gap: 1rem;
 }
 
-.contact-item {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    transition: 0.3s;
+.link-icon {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.link-icon:hover {
+    color: var(--primary);
+}
+
+/* ================= CONTACTO & FOOTER ================= */
+/* Nuevo Layout Grid para Contacto */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /* Info izquierda más angosta, Form derecha más ancha */
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: flex-start;
+    /* Alineado a la izquierda */
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-card);
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
 }
 
-.contact-item:hover {
-    color: var(--accent);
-    padding-left: 10px; /* Efecto de movimiento a la derecha */
+.social-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
 }
 
-/* --- SERVICIOS --- */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    text-align: center;
-}
-
-.service-card {
+/* Estilos del Formulario */
+.contact-form {
     background: var(--bg-card);
-    padding: 3rem 2rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: 0.3s;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15); /* Resplandor suave */
-}
-
-.service-icon {
-    font-size: 3rem;
-    color: var(--accent);
+.form-group {
     margin-bottom: 1.5rem;
 }
 
-.service-card h3 {
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 500;
 }
 
-.service-card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-body);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
 }
 
-/* --- FOOTER --- */
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+textarea.form-control {
+    resize: vertical;
+    /* Permite redimensionar solo verticalmente */
+    min-height: 120px;
+}
+
 footer {
     text-align: center;
     padding: 2rem;
-    margin-top: 3rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-/* --- BURGER MENU (Oculto en desktop) --- */
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-main);
-    margin: 5px;
-    transition: 0.3s;
-}
-
-/* --- CLASES PARA ANIMACION JS --- */
-.hidden {
-    opacity: 0;
-    transform: translateY(50px);
-    /* Empieza abajo */
-    transition: all 1s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* --- MEDIA QUERY (MÓVIL) - ESTILO PANEL LATERAL --- */
-@media screen and (max-width: 768px) {
-    
-    /* Panel Lateral (No ocupa toda la pantalla) */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;       /* Altura completa */
-        width: 70%;          /* <--- CLAVE: Ocupa solo el 70% del ancho */
-        max-width: 300px;    /* Tope máximo para que no se vea gigante */
-        
-        background-color: var(--bg-card); /* Color gris azulado (tarjetas) */
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5); /* Sombra a la izquierda */
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centra el contenido verticalmente */
-        align-items: center;
-        
-        transform: translateX(100%); /* Oculto a la derecha */
-        transition: transform 0.3s ease-in-out;
-        z-index: 998;
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    /* Items del menú (Más juntos) */
-    .nav-links li {
-        opacity: 0;
-        margin: 1.2rem 0; /* <--- CLAVE: Menos espacio entre opciones (antes era mucho más) */
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--bg-card);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: var(--transition);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        padding: 1rem 0;
     }
 
     .nav-links a {
-        font-size: 1.2rem; /* Tamaño de letra normal/legible */
-        font-weight: 500;
-        color: var(--text-main);
-        letter-spacing: 1px;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
     }
 
-    .nav-links a:hover {
-        color: var(--accent);
+    /* CORRECCIÓN: Ocultar la línea de subrayado en móviles */
+    .nav-links a::after {
+        display: none;
     }
 
-    /* Icono Hamburguesa */
-    .burger {
+    .about-grid,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        /* Colapsar a una columna */
+        gap: 3rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+        margin-top: 10px;
         display: block;
-        z-index: 999; /* Siempre encima del menú */
-        cursor: pointer;
+        /* Stack botones en movil muy pequeño */
     }
 
-    /* Animación Icono a X */
-    .toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
-    .toggle .line2 { opacity: 0; }
-    .toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
-
-    /* --- Arreglo Botones Hero (Mantenemos esto que estaba bien) --- */
-    .hero h1 { font-size: 2.2rem; }
-    
-    .hero-btns {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        width: 80%;
-        margin: 2rem auto 0;
-    }
-
-    .btn { display: block; width: 100%; margin: 0; }
-
-    /* Clases JS */
-    .nav-active { transform: translateX(0%); }
-    
-    @keyframes navLinkFade {
-        from { opacity: 0; transform: translateX(20px); }
-        to { opacity: 1; transform: translateX(0); }
+    @media (min-width: 400px) {
+        .btn-outline {
+            display: inline-block;
+            margin-top: 0;
+            margin-left: 10px;
+        }
     }
 }
